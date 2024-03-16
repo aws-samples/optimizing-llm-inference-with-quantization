@@ -1,6 +1,6 @@
 # Optimizing Generative AI LLM Inference Deployment on AWS GPUs By Leveraging Quantization with llama.cpp 
 
-This repository provides a *Cloudformation template* to create, evaluate and run quantized Large Language Models (LLMs) with Llama.cpp on Amazon EC2. For more detailed information on Benchmarking refer to the Quantization Benchmarks.md file.
+This repository provides a *Cloudformation template* to create, evaluate and run quantized Large Language Models (LLMs) with Llama.cpp on Amazon EC2. For more detailed information on Benchmarking refer to the [Quantization Benchmarks](Quantization Benchmarks.md) file.
 
 ## Contents
 - [Results](#results)
