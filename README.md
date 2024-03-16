@@ -140,9 +140,8 @@ cd /home/ubuntu
 conda activate llamacpp
 ```
 
-3. Download Llama-2-7B model from HuggingFace
-
-We use the converted and quantized model by [TheBloke](https://huggingface.co/TheBloke).
+3. Download the Llama-2-7B model from [HuggingFace](https://huggingface.co/).
+Models converted and quantized with Llama.cpp can be accessed for download on HuggingFace, for the purpose of this experiment, we use a repo that provides us with the GGUF format model files for  [Meta Llama 2's Llama 2 7B](https://huggingface.co/meta-llama/Llama-2-7b-hf).
 
 ```sh
 huggingface-cli download TheBloke/Llama-2-7B-GGUF llama-2-7b.Q4_K_M.gguf --local-dir . --local-dir-use-symlinks False
