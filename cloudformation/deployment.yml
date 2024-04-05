@@ -10,7 +10,7 @@ Parameters:
   Ec2InstanceType:
     Description: EC2 instance type
     Type: String
-    Default: g4dn.xlarge
+    Default: g6.xlarge
     AllowedValues:
       - g4dn.xlarge
       - g4dn.2xlarge
@@ -23,6 +23,14 @@ Parameters:
       - g5.16xlarge
       - g5.24xlarge
       - g5.48xlarge
+      - g6.xlarge
+      - g6.2xlarge
+      - g6.4xlarge
+      - g6.8xlarge
+      - g6.12xlarge
+      - g6.16xlarge
+      - g6.24xlarge
+      - g6.48xlarge
   TextGenUIUser:
     Description: User for connecting to the text generation webui
     Type: String
