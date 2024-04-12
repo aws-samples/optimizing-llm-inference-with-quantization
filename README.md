@@ -140,17 +140,17 @@ cd /home/ubuntu
 conda activate llamacpp
 ```
 
-3. Download the Llama-2-7B model from [HuggingFace](https://huggingface.co/).
+3. [Download](https://huggingface.co/docs/huggingface_hub/en/guides/download) the Llama-2-7B model from [HuggingFace](https://huggingface.co/).
 Models converted and quantized with Llama.cpp can be accessed for download on HuggingFace, for the purpose of this experiment, we use a repo that provides us with the GGUF format model files for  [Meta Llama 2's Llama 2 7B](https://huggingface.co/meta-llama/Llama-2-7b-hf).
 
 ```sh
 huggingface-cli download TheBloke/Llama-2-7B-GGUF llama-2-7b.Q4_K_M.gguf --local-dir . --local-dir-use-symlinks False
 ```
-4. Optionally, you can also convert to FP16 GGUF and quantize your own model with Llama.cpp as well
+4. Optionally, you can also convert to FP16 GGUF and [quantize](https://github.com/ggerganov/llama.cpp/tree/master?tab=readme-ov-file#prepare-and-quantize) your own model with Llama.cpp as well
 
 ```sh
 # convert to F16 GGUF
-python3 convert.py ./models/model-name --outfile ./models/model name/ggml-model-f16.gguf --outtype f16
+python3 convert.py ./models/model-name --outfile ./models/model-name/ggml-model-f16.gguf --outtype f16
 
 # quantize to Q8_0 and Q4_K
 ./quantize ./models/model-name/ggml-model-f16.gguf ./models/model-name/ggml-model-q8_0.gguf q8_0
@@ -247,6 +247,8 @@ After running the commands above, the `Makefile` will open. Replace `MK_NVCCFLAG
 
 ### Batched-bench
 
+Benchmark the [batched decoding performance of llama.cpp](https://github.com/ggerganov/llama.cpp/blob/master/examples/batched-bench/README.md)
+
 1. Build benchmark
 
 ```sh
@@ -260,6 +262,8 @@ LLAMA_CUBLAS=1 make -j batched-bench
 ```
 
 ### Llama-bench
+
+Performance [testing tool](https://github.com/ggerganov/llama.cpp/tree/master/examples/llama-bench) for llama.cpp.
 
 1. Build benchmark
 
